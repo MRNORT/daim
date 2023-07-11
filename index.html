@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Hotline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2E3440;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: fadeIn 1s ease;
+    }
+    
+    .phone-number {
+      font-size: 48px;
+      color: #ECEFF4;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+    }
+    
+    .call-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 24px;
+      color: #2E3440;
+      background-color: #81A1C1;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeInButton 1s ease forwards;
+    }
+    
+    .call-button:hover {
+      background-color: #5E81AC;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeInButton {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    function makeCall() {
+      window.location.href = 'tel:015201934910';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="phone-number">
+      Call our sex hotline: 015201934910
+    </div>
+    <button class="call-button" onclick="makeCall()">Call Now</button>
+  </div>
+</body>
+</html>
